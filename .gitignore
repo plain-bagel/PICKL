@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Unit test / coverage reports
+test/
+.coverage
+htmlcov/
+.env.test
+
+
+# Virtual environments
+venv/
+
+# mypy / ruff
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+
+# PyCharm
+.idea/
+
+# Config / Testing / Packaging
+Makefile
+pyproject.toml
+__init__.py
+
+# Artifacts
+*.zip
