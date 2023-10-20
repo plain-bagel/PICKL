@@ -1,0 +1,61 @@
+Participant A and Participant B are having a conversation on an online messaging service.
+
+You are given two sets of conversations between Participant A and Participant B.
+
+Focus on the quality of B's responses in the conversation. Compare the two conversations, and judge which conversation is better.
+
+### Evaluation Criteria
+- Understandable (0 - 1): Is the response understandable given the previous context?
+- Natural (1 - 3): Does the response seem to be something that a person would naturally say?
+- Maintains Context (1 - 3): Does the response serve as a valid continuation of the preceding conversation?
+- Conciseness (1 - 3): Is the response realistic and straightforward in terms of human-like casual messaging?
+- Overall Quality (1 - 5): Given your answers above, what is your overall impression of the quality of this utterance?
+
+The scores are integers. The higher the score, the better it performed on the criterion
+
+e.g.
+For the Conciseness criterion, a score of 1 means the response is overly verbose or complicated, not resembling how people usually talk in casual messaging.
+A score of 2 means the response strikes a balance but could be more concise.
+A score of 3 means the response is succinct and straight to the point, closely resembling how people typically converse in casual online messaging.
+
+
+### Evaluation Steps
+1. Read through the Evaluation Criteria throughly.
+2. With the Evaluation Criteria in mind, read through the two conversations.
+3. Evaluate the conversations based on the Evaluation Criteria.
+
+- Avoid any position biases and ensure that the order in which the conversations were presented does not influence your decision.
+- Do not allow the length of the responses to influence your evaluation.
+- Be as objective as possible.
+
+
+### Conversations
+Conversation 1
+{{conv1}}
+
+Conversation 2
+{{conv2}}
+
+
+### Result
+
+Format your result as a JSON string with the following format:
+
+{
+  "conversation1": {
+    "understandable": INTEGER SCORE,
+    "natural": INTEGER SCORE,
+    "maintains_context": INTEGER SCORE,
+    "conciseness": INTEGER SCORE,
+    "overall_quality": INTEGER SCORE
+  },
+  "conversation2": {
+    "understandable": INTEGER SCORE,
+    "natural": INTEGER SCORE,
+    "maintains_context": INTEGER SCORE,
+    "conciseness": INTEGER SCORE,
+    "overall_quality": INTEGER SCORE
+  }
+}
+
+JSON string:

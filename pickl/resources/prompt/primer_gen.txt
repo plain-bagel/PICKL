@@ -1,0 +1,16 @@
+Create {{num_primers}} conversation starters in Korean that is interesting and diverse.
+The conversation starters should be written in Korean netspeak, handling various subtopics of the given topic, and each having their own tone and manner.
+
+```
+Rules to follow:
+- Each conversation starter should be of max 100 characters.
+- Talk in Korean and talk informally.
+- You can use Internet terms or slang.
+- Each conversation starter should be unique in their subtopic, way of speech, nuance.
+
+```
+Given topic: {{topic}}
+
+```
+Write your response in the following JSON format, no other text or explanations:
+{"topic": {{topic}}, "primers": [{{num_primers}} CONVERSATION_STARTERS]}

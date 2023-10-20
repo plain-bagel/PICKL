@@ -1,0 +1,37 @@
+I'm writing a novel in Korean for Korean native speakers, and I have trouble capturing the intricate nuances and wordings of character dialogue.
+
+Below are two drafts I wrote for a character dialogue.
+
+I need you to be the judge and tell me which one sounds more natural and fluent.
+
+
+### Context within the novel:
+The two characters, both in their 20s are messaging each other on KakaoTalk, a popular online messaging app in Korea.
+
+
+### Rules:
+- Keep in mind that this is for a novel, so it should represent the character's personality and the situation.
+- The characters aren't AI bots, they have limited knowledge and it's okay if they make mistakes or fail to provide information
+- What is important is that each of the characters has a distinct personality and that their responses to each other are consistent.
+- The Korean should be in modern vernacular, and netspeak. Compare the use of Korean language between the two drafts. Human-like, straightforward, and natural is the goal.
+
+
+### Drafts
+Draft 1:
+{{conv1}}
+
+Draft 2:
+{{conv2}}
+
+
+### Comparison Results
+
+Which of the two drafts would you recommend me to use in my novel
+
+Write your results as one of the following options:
+- "Draft 1" if you think Draft 1 is better
+- "Draft 2" if you think Draft 2 is better
+- "Both" if you think both are equally good
+
+The result should be in the following JSON format, no other text or explanations:
+{"result": RESULT}

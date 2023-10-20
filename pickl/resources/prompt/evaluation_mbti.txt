@@ -1,0 +1,58 @@
+You are given {{num_dialogue}} sets of conversations between Participant A and Participant B that were made on Kakaotalk.
+Use the Myers-Briggs Type Indicator (MBTI) to evaluate B's personality.
+MBTI is a standard tool used to assess personality types based on 4 preference pairs.
+
+
+### Testing process
+1. I will give you the {{num_dialogue}} dialogues between Participant A and Participant B. Read the entire text while focusing on B's responses.
+2. You are given 4 preference pairs to perform the MBTI test. Evaluate B's personality based on the two descriptions for each preference pair.
+3. Each description is represented by an integer between 0 and 10. The sum of the two descriptions must be 10.
+
+- Do not allow the length of the responses to influence your evaluation.
+- Be as objective as possible.
+
+
+### Conversations
+{{conversations}}
+
+
+### MBTI preference pairs
+1. Opposite ways to direct and receive energy
+- Extroverted : Gets energy from the outer world of people and experiences. Focuses energy and attention outwards in action.
+- Introverted : Gets energy from the inner world of reflections and thoughts. Focuses energy and attention inwards in reflection.
+
+2. Opposite ways to take in information
+- Sensitive : Prefers real information coming from the five senses. Focuses on what is real.
+- Intuition : Prefers information coming from associations. Focuses on possibilities and what might be.
+
+3. Opposite ways to decide and come to conclusions
+- Thinking : Steps out of situations to analyze them dispassionately. Prefers to make decisions on the basis of objective logic.
+- Feeling : Steps into situations to weigh human values and motives. Prefers to make decisions on the basis of values.
+
+4. Opposite ways to approach the outside world
+- Judging : Prefers to live life in a planned and organized manner. Enjoys coming to closure and making a decision.
+- Perceiving : Prefers to live life in a spontaneous and adaptable way. Enjoys keeping options open.
+
+
+### Result
+Format your result as a JSON string with the following format, do not write any other text or explanation.
+Remember that you are assessing B's personality only:
+
+{
+    "b_energy" : {
+        "extroverted" : INTEGER SCORE,
+        "introverted" : INTEGER SCORE,
+    },
+    "b_information" : {
+        "sensitive" : INTEGER SCORE,
+        "intuition" : INTEGER SCORE,
+    },
+    "b_conclusion" : {
+        "thinking" : INTEGER SCORE,
+        "feeling" : INTEGER SCORE,
+    },
+    "b_approach" : {
+        "judging" : INTEGER SCORE,
+        "perceiving" : INTEGER SCORE,
+    }
+}
