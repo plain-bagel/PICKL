@@ -12,6 +12,7 @@
 [**PICKL에 대하여**](#-pickl에-대하여)
 | [**Structure**](#structure)
 | [**Process**](#-process)
+| [**리더보드 참여 방법**](#리더보드-참여-방법)
 | [**Reference**](#reference)
 
 ![PICKL image](assets/pickl.png)  
@@ -33,14 +34,14 @@ PICKL은 한국어 언어 모델들의 일상 대화 능력을 비교하고, 각
 &nbsp; 
 
 ## Structure
-| **Directory**/Root File | Description                                                                                          |
-|:-------------------:|------------------------------------------------------------------------------------------------------|
-|  **conv_generate**  | User(A)와 GPT-4(B) 사이의 대화를 생성합니다. <br/> `primer_gen.py` : 대화 생성에 사용되는 primer들을 생성합니다.                      |
-|      **model**      | `user.py` : 사용자가 입력으로 주어야 할 endpoint가 동작하는 과정입니다.  <br/> `bot.py` : GPT-4가 동작하는 과정입니다. |
-|   **evaluation**    | 생성된 대화를 기반으로 GPT-4가 evaluation prompt를 이용하여 평가합니다.                                                   |
-|     **rating**      | 두 가지의 대화를 비교하는 prompt의 경우, elo rating을 사용합니다.                                                        |
-|    **resources**    | `prompt` : 대화 생성, evaluation 등에 쓰이는 prompt가 있습니다. <br/> `topic_primer` : 주제, 대화 예제가 존재합니다. |
-|   api_example.py    | 사용자가 리더보드에 모델을 올리기 위한 API를 만드는 예제입니다.<br/>(GPT-3.5가 일상대화를 할 수 있게끔 prompt engineering한 model endpoint)                                                                | 
+|         **Directory**/Root File          | Description                                                                                          |
+|:----------------------------------------:|------------------------------------------------------------------------------------------------------|
+| **[conv_generate](pickl/conv_generate)** | User(A)와 GPT-4(B) 사이의 대화를 생성합니다. <br/> `primer_gen.py` : 대화 생성에 사용되는 primer들을 생성합니다.                      |
+|  **[model](pickl/conv_generate/model)**  | `user.py` : 사용자가 입력으로 주어야 할 endpoint가 동작하는 과정입니다.  <br/> `bot.py` : GPT-4가 동작하는 과정입니다. |
+|    **[evaluation](pickl/evaluation)**    | 생성된 대화를 기반으로 GPT-4가 evaluation prompt를 이용하여 평가합니다.                                                   |
+|        **[rating](pickl/rating)**        | 두 가지의 대화를 비교하는 prompt의 경우, elo rating을 사용합니다.                                                        |
+|     **[resources](pickl/resources)**     | `prompt` : 대화 생성, evaluation 등에 쓰이는 prompt가 있습니다. <br/> `topic_primer` : 주제, 대화 예제가 존재합니다. |
+|  [api_example.py](pickl/api_example.py)  | 사용자가 리더보드에 모델을 올리기 위한 API를 만드는 예제입니다.<br/>(GPT-3.5가 일상대화를 할 수 있게끔 prompt engineering한 model endpoint)                                                                | 
 
 &nbsp; 
 
@@ -106,6 +107,24 @@ B: 얍얍!
 
 ### 4-2. 블라인드 테스트를 통한 수동 평가
 Coming Soon!
+
+&nbsp; 
+
+## 리더보드 참여 방법
+1. [API 생성 예제](pickl/api_example.py) 및 [설명](pickl/README.md)을 참고하여 User model API를 생성합니다.
+2. [리더보드 페이지](https://pickl.pbagel.com/)에 접속한 후, [<모델 제출하기>](https://pickl.pbagel.com/%EB%AA%A8%EB%8D%B8_%EC%A0%9C%EC%B6%9C%ED%95%98%EA%B8%B0) 탭에서 형식에 맞추어 모델을 제출합니다.
+3. 모델이 제출된 후, [<제출 기록>](https://pickl.pbagel.com/%EC%A0%9C%EC%B6%9C_%EA%B8%B0%EB%A1%9D) 탭에서 평가 진행 상태를 확인할 수 있습니다.
+
+&nbsp;
+- 제출 사항
+```angular2html
+ ∙ 모델 API 주소
+ ∙ 모델 이름 (리더보드에 표시됩니다)
+ ∙ 모델 종류 (생성형 모델 / 추출형 모델 / 하이브리드 모델 / 이 외)
+ ∙ Tuning 방법 (Fine-tuned / Prompt-engineered / RLHF-tuned / 이 외)
+ ∙ 베이스 모델
+ ∙ 파라미터 수 (Billion 기준)
+```
 
 &nbsp; 
 
